@@ -1,0 +1,20 @@
+{
+  "parser": "vue-eslint-parser", // Use the Vue parser
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser", // Use TypeScript parser for `<script>` tags
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "extraFileExtensions": [".vue"] // Allow `.vue` files to be parsed
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended" // Add TypeScript recommended rules
+  ],
+  "plugins": [
+    "@typescript-eslint" // Use the TypeScript plugin
+  ],
+  "rules": {
+    "vue/singleline-html-element-content-newline": "off"
+  }
+}
