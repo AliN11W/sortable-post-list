@@ -7,3 +7,7 @@ export const isEqual = (a: unknown[], b: unknown[]): boolean => {
 
   return aSorted.every((value, index) => value == bSorted[index]);
 };
+
+export const rangeFromZeroToN = (n: number): number[] => {
+  return Array.from({ length: n }, (_, index) => index);
+};

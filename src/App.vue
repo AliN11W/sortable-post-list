@@ -9,11 +9,12 @@ import MovableList from "@/components/MovableList.vue";
 import TimeTravel from "@/components/TimeTravel.vue";
 import LoadingSpinner from "@/components/LoadingSpinner.vue";
 import type { UpdatedListOrderDetails, PostType, ListOrderType } from "@/types";
+import { rangeFromZeroToN } from "@/utils/array";
 
 // Define the initial order of the list.
 // This is used to reset the list order.
 // We could also use the initial order of the posts, or take it from the server/user.
-const initialOrder = [0, 1, 2, 3, 4];
+const initialOrder = rangeFromZeroToN(POSTS_COUNT);
 
 // Using a clone of the initial order to avoid modifying the original array.
 const currentOrder = ref([...initialOrder]);
