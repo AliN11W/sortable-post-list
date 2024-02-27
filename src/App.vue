@@ -67,7 +67,7 @@ const setListOrder = (newOrder: ListOrderType | null) => {
   <div>
     <LoadingSpinner
       v-if="loading"
-      class="w-[50px] h-[50px] text-[#6357b1] absolute top-1/2 left-1/2"
+      class="w-[50px] h-[50px] text-[#6357b1] absolute top-1/2 left-0 right-0 mx-auto"
     />
 
     <template v-else>
