@@ -1,4 +1,11 @@
 <script setup lang="ts" generic="T">
+/**
+ * This is a generic component that can be used to create a list of items
+ * that can be sorted. It uses the useSortableList composable to handle the
+ * sorting of the list. This component is created for the purpose of reusability.
+ * So it can be used to create a list of any type of items.
+ */
+
 import { toRef } from "vue";
 import type {
   ListOrderType,
@@ -8,7 +15,6 @@ import type {
 import useSortableList from "@/features/useSortableList";
 import MovableListItem from "@/components/MovableListItem.vue";
 
-//
 const props = defineProps({
   // The list of items to be ordered.
   items: {

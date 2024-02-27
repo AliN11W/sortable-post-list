@@ -1,18 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import TimeTravelItem from "./TimeTravelItem.vue";
+import TimeTravelItem from "@/components/TimeTravelItem.vue";
 import type { Optional, TimeTravelSnapshot } from "@/types";
 import { randomHex } from "@/utils/string";
 
-/**
- * Expose the addSnapshot method to the parent component.
- * So it can add a new snapshot to the list.
- */
+// Expose the addSnapshot method to the parent component.
+// So it can add a new snapshot to the list.
 defineExpose({ addSnapshot });
 
-/**
- * Expose the order of the list to the parent component based on the snapshot.
- */
+// Expose the order of the list to the parent component based on the snapshot.
 const emit = defineEmits(["set-list-order"]);
 
 const snapshots = ref<TimeTravelSnapshot[]>([]);

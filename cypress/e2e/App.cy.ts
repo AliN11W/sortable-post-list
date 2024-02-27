@@ -1,6 +1,6 @@
 describe("App.vue", () => {
   beforeEach(() => {
-    // Mock the API response
+    // Mock the API response so we can test the UI without relying on the real API
     cy.intercept("GET", `${Cypress.env("api_url")}/posts`, {
       statusCode: 200,
       body: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
