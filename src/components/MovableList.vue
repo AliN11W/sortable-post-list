@@ -41,7 +41,7 @@ const emit = defineEmits<{
   ];
 }>();
 
-const order = toRef(props, "order");
+const listOrder = toRef(props, "order");
 
 /**
  * Using the useSortableList composable to handle the list sorting.
@@ -50,7 +50,7 @@ const order = toRef(props, "order");
  */
 const { orderedItems, moveUp, moveDown } = useSortableList(
   props.items,
-  order,
+  listOrder,
   onOrderUpdateCallback
 );
 
@@ -67,7 +67,7 @@ function onOrderUpdateCallback(
   emit("update:order", {
     order: newOrder,
     details: {
-      movedItem: props.items[order.value[toIndex]],
+      movedItem: props.items[listOrder.value[toIndex]],
       fromIndex,
       toIndex,
     },
