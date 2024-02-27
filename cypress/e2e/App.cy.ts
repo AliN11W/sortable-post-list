@@ -1,10 +1,10 @@
-describe("template spec", () => {
+describe("App.vue", () => {
   beforeEach(() => {
     // Mock the API response
     cy.intercept("GET", `${Cypress.env("api_url")}/posts`, {
       statusCode: 200,
       body: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
-    }).as("getUsers");
+    });
 
     cy.visit(Cypress.env("app_url"));
   });
