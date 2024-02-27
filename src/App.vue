@@ -7,7 +7,7 @@ import usePost from "@/features/usePost";
 import CrossedBackground from "@/components/CrossedBackground.vue";
 import MovableList from "@/components/MovableList.vue";
 import TimeTravel from "@/components/TimeTravel.vue";
-import LoadingSpinner from "./components/LoadingSpinner.vue";
+import LoadingSpinner from "@/components/LoadingSpinner.vue";
 import type { UpdatedListOrderDetails, PostType, ListOrderType } from "@/types";
 
 // Define the initial order of the list.
