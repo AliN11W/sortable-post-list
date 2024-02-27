@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// This page is tested via Cypress.
+// See the test file at cypress/e2e/App.cy.ts
 import { onMounted, ref } from "vue";
 import { POSTS_COUNT } from "@/constants";
 import usePost from "@/features/usePost";
