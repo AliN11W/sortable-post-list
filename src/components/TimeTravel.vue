@@ -31,10 +31,10 @@ const travelToListOrder = (index: number) => {
     <header class="p-3 bg-white">
       <h2 class="font-semibold text-gray-700">List of actions commited</h2>
     </header>
-    <div class="bg-gray-100 p-3 min-h-[72px]">
+    <div class="bg-gray-100 p-4 min-h-[72px]">
       <div
         v-if="snapshots.length > 0"
-        class="relative"
+        class="relative shadow-lg"
         data-testid="time-travel-list"
       >
         <TransitionGroup name="list">
