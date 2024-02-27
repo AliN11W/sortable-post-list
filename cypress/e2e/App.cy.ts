@@ -1,6 +1,7 @@
 describe("App.vue", () => {
   beforeEach(() => {
-    // Mock the API response so we can test the UI without relying on the real API
+    // Mock the API response
+    // so we can test the UI without relying on the real API
     cy.intercept("GET", `${Cypress.env("api_url")}/posts`, {
       statusCode: 200,
       body: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
@@ -9,7 +10,7 @@ describe("App.vue", () => {
     cy.visit(Cypress.env("app_url"));
   });
 
-  test("can move items by clicking on move buttons", () => {
+  it("should move items by clicking on the move buttons", () => {
     cy.contains("div", "Post 1")
       .find("button[data-testid='move-down-button']")
       .click();
@@ -22,7 +23,7 @@ describe("App.vue", () => {
       });
   });
 
-  test("item is added to history after move", () => {
+  it("should add item to history after move", () => {
     cy.contains("div[data-testid='list-item']", "Post 1")
       .find("button[data-testid='move-down-button']")
       .click();
@@ -35,7 +36,7 @@ describe("App.vue", () => {
       });
   });
 
-  test("can travel through time", () => {
+  it("should travel through time", () => {
     cy.contains("div", "Post 2")
       .find("button[data-testid='move-down-button']")
       .click();
